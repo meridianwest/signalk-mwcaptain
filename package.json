@@ -1,0 +1,35 @@
+{
+  "name": "signalk-mwcaptain",
+  "version": "1.0.0",
+  "description": "MW Captain Plugin: Raymarine Evolution/SmartPilot autopilot control on NMEA 2000 from the MW Captain app, with the same safety rules as the MW Box",
+  "main": "index.js",
+  "files": ["index.js", "assets/", "README.md", "LICENSE", "CHANGELOG.md"],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "signalk-node-server-plugin",
+    "signalk-category-utility",
+    "autopilot",
+    "raymarine",
+    "nmea2000"
+  ],
+  "signalk": {
+    "displayName": "MW Captain Plugin",
+    "appIcon": "./assets/icon.png"
+  },
+  "signalk-plugin-enabled-by-default": false,
+  "author": "Meridian West",
+  "license": "MIT",
+  "homepage": "https://github.com/meridianwest/signalk-mwcaptain#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meridianwest/signalk-mwcaptain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meridianwest/signalk-mwcaptain/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
