@@ -84,7 +84,15 @@ Authorization: Bearer <token>
 ```
 
 Answer: `{"state":"COMPLETED","statusCode":200}`, or `statusCode` 400 with a `message` explaining why
-the command was refused (for example the autopilot is not in AUTO). Messages are currently in Italian.
+the command was refused:
+
+| `message` | When |
+|---|---|
+| `Autopilot not found on the NMEA 2000 bus` | AUTO or a course change, autopilot not seen in the last 5 s |
+| `The autopilot is not in AUTO` | course change while in STANDBY |
+| `Too fast: one key at a time` | less than 0.4 s since the previous course change |
+| `Maximum 20° every 2 seconds: wait a moment` | more than 20° within 2 s |
+| `Unknown autopilot command: …` | any other value |
 
 ## Upgrading from `signalk-mwcaptain-pilot`
 
